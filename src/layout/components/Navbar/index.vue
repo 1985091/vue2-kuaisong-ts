@@ -54,11 +54,11 @@
       <el-radio-group v-model="setStatus">
         <el-radio :label="1">
           营业中
-          <span>当前餐厅处于营业状态，自动接收任何订单，可点击打烊进入店铺打烊状态。</span>
+          <span>营业中。</span>
         </el-radio>
         <el-radio :label="0">
           打烊中
-          <span>当前餐厅处于打烊状态，仅接受营业时间内的预定订单，可点击营业中手动恢复营业状态。</span>
+          <span>打烊中。</span>
         </el-radio>
       </el-radio-group>
       <span slot="footer"
@@ -174,12 +174,13 @@ export default class extends Vue {
     let socketUrl = process.env.VUE_APP_SOCKET_URL + clientId
     console.log(socketUrl, 'socketUrl')
     if (typeof WebSocket == 'undefined') {
-      that.$notify({
-        title: '提示',
-        message: '当前浏览器无法接收实时报警信息，请使用谷歌浏览器！',
-        type: 'warning',
-        duration: 0,
-      })
+      // that.$notify({
+      //   title: '提示',
+      //   message: ' ',
+      //   // message: '当前浏览器无法接收实时报警信息，请使用谷歌浏览器！',
+      //   type: 'warning',
+      //   duration: 0,
+      // })
     } else {
       this.websocket = new WebSocket(socketUrl)
       // 监听socket打开
@@ -224,12 +225,13 @@ export default class extends Vue {
       }
       // 监听socket错误
       this.websocket.onerror = function () {
-        that.$notify({
-          title: '错误',
-          message: '服务器错误，无法接收实时报警信息',
-          type: 'error',
-          duration: 0,
-        })
+        // that.$notify({
+        //   title: '错误',
+        //   message: ' ',
+        //   // message: '无法接受服务器信息',
+        //   type: 'error',
+        //   duration: 0,
+        // })
       }
       // 监听socket关闭
       this.websocket.onclose = function () {

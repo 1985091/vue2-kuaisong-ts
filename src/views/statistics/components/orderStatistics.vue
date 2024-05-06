@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h2 class="homeTitle">订单统计</h2>
+    <h2 class="homeTitle">订单完成率</h2>
     <div class="charBox">
       <div class="orderProportion">
         <div>
