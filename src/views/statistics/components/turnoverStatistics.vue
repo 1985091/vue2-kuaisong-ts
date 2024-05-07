@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h2 class="homeTitle">营业额统计</h2>
+    <h2 class="homeTitle">销售统计</h2>
     <div class="charBox">
       <div id="main" style="width: 100%; height: 320px"></div>
       <ul class="orderListLine turnover">
-        <li>营业额(元)</li>
+        <li>营业获利</li>
       </ul>
     </div>
   </div>

@@ -8,14 +8,14 @@
       <TurnoverStatistics :turnoverdata="turnoverData" />
       <!-- end -->
       <!-- 用户统计 -->
-      <UserStatistics :userdata="userData" />
+      <!-- <UserStatistics :userdata="userData" /> -->
       <!-- end -->
     </div>
     <div class="homeMain homecon">
       <!-- 订单统计 -->
-      <OrderStatistics :orderdata="orderData" :overviewData="overviewData" />
+      <!-- <OrderStatistics :orderdata="orderData" :overviewData="overviewData" /> -->
       <!-- end -->
-      <!-- 销量排名TOP10 -->
+      <!-- 推荐订单榜 -->
       <Top :top10data="top10Data" />
       <!-- end -->
     </div>
