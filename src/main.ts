@@ -11,6 +11,9 @@ import '@/styles/home.scss'
 import 'vue-area-linkage/dist/index.css'
 
 import * as echarts from 'echarts'
+//swiper组件
+// import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import 'swiper/css/swiper.css'
 // 快送外卖样式表
 import '@/styles/newRJWMsystem.scss'
 import '@/styles/icon/iconfont.css'
@@ -42,3 +45,5 @@ new Vue({
   store,
   'render': (h) => h(App)
 }).$mount('#app')
+
+// Vue.use(VueAwesomeSwiper)

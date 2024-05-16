@@ -40,7 +40,7 @@ const router = new Router({
       path: "/",
       component: Layout,
       // redirect: "/dashboard",
-      redirect: "/statistics",
+      redirect: "/recommend",
       children: [
         // {
         //   path: "dashboard",
@@ -53,12 +53,30 @@ const router = new Router({
         //     affix: true
         //   }
         // },
+        // {
+        //   path: "/main",
+        //   component: () =>
+        //     import(/* webpackChunkName: "shopTable" */ "@/views/main/a.vue"),
+        //   meta: {
+        //     title: "欢迎光临",
+        //     icon: "icon-main"
+        //   }
+        // },
+        {
+          path: "/recommend",
+          component: () =>
+            import(/* webpackChunkName: "shopTable" */ "@/views/recommened/index.vue"),
+          meta: {
+            title: "欢迎光临",
+            icon: "icon-recommend"
+          }
+        },
 		{
           path: "/statistics",
           component: () =>
             import(/* webpackChunkName: "shopTable" */ "@/views/statistics/index.vue"),
           meta: {
-            title: "统计数据",
+            title: "数据",
             icon: "icon-statistics"
           }
         },
